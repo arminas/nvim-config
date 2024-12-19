@@ -645,6 +645,15 @@ require('lazy').setup({
             },
           },
         },
+
+        ruby_lsp = {
+          setup = {
+            init_options = {
+              formatter = 'standard',
+              linters = { 'standard' },
+            },
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
