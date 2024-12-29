@@ -647,6 +647,7 @@ require('lazy').setup({
           },
         },
 
+        --[[
         ruby_lsp = {
           setup = {
             init_options = {
@@ -655,6 +656,8 @@ require('lazy').setup({
             },
           },
         },
+        ]]
+        --
       }
 
       -- Ensure the servers and tools above are installed
