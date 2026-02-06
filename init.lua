@@ -854,8 +854,12 @@ require('lazy').setup({
     'catppuccin/nvim',
     name = 'catppuccin',
     priority = 1000,
-    init = function()
-      vim.cmd.colorscheme = 'catppuccin'
+    config = function()
+      require('catppuccin').setup {
+        flavour = 'frappe',
+        auto_integrations = true,
+      }
+      vim.cmd.colorscheme 'catppuccin'
     end,
   },
   -- Highlight todo, notes, etc in comments
@@ -968,5 +972,15 @@ require('lazy').setup({
   },
 })
 
+-- Added by Arminas
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'go',
+  callback = function()
+    vim.bo.tabstop = 4
+    vim.bo.shiftwidth = 4
+    vim.bo.softtabstop = 4
+    vim.bo.expandtab = true
+  end,
+})
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
