@@ -1,5 +1,8 @@
 local lsp_group = vim.api.nvim_create_augroup("lsp", { clear = true })
 
+vim.lsp.enable("lua_ls", "gopls")
+vim.lsp.codelens.enable(true)
+
 vim.api.nvim_create_autocmd("LspAttach", {
   group = lsp_group,
   callback = function(ev)

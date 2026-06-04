@@ -13,9 +13,6 @@ vim.pack.add({
   { src = "https://github.com/nvim-telescope/telescope.nvim" },
 })
 
-vim.lsp.enable("lua_ls", "gopls")
-vim.lsp.codelens.enable(true)
-
 -- Works best if 'completeopt' has "noselect".
 -- Use CTRL-Y to select an item. |complete_CTRL-Y|
 vim.cmd [[set completeopt+=menuone,noselect,popup]]
